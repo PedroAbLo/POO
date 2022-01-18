@@ -1,7 +1,7 @@
-class Persona
+class Person
 {
 
-    constructor(nombre, apellido1, altura, peso, yearOfBirth)
+    constructor(nombre, apellido1, altura, peso, yearOfBirth,hobbies )
     {
         this.nombre=nombre;
         this.apellido1=apellido1;
@@ -9,7 +9,7 @@ class Persona
         this.apellido2;
         this.altura=altura;
         this.peso=peso;
-        this.hobbies = ["cantar", "bailar", "leer"];
+        this.hobbies =hobbies;
         this.colorOjos;
         this.colorPelo;
         this.tatuajes;
@@ -45,9 +45,10 @@ class Persona
 }
 
 // Bloque Main
-let persona1 = new Persona("Juan","Garrido",180,90,1982);
-console.log(persona1.calcularIMC());
-console.log(persona1.printAll());
-console.log(persona1.printHobbies());
+// let hobbies = ["comer", "jugar"];
+// let persona1 = new Person("Juan","Garrido",180,90,1982,);
+// console.log(persona1.calcularIMC());
+// console.log(persona1.printAll());
+// console.log(persona1.printHobbies());
 
-module.exports = Persona;
+module.exports = Person;
