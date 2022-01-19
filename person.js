@@ -1,21 +1,19 @@
 class Person
 {
 
-    constructor(nombre, apellido1, altura, peso, yearOfBirth,hobbies )
+    constructor(nombre, apellido1, altura, peso, yearOfBirth,hobbies)
     {
         this.nombre=nombre;
         this.apellido1=apellido1;
         this.yearOfBirth=yearOfBirth;
-        this.apellido2;
+        // this.apellido2;
         this.altura=altura;
         this.peso=peso;
-        this.hobbies =hobbies;
-        this.colorOjos;
-        this.colorPelo;
-        this.tatuajes;
-  
-    
-
+        this.hobbies = hobbies;
+        this.edad = edad(yearOfBirth)
+        // this.colorOjos;
+        // this.colorPelo;
+        // this.tatuajes;
     }
     
     calcularIMC()
@@ -29,26 +27,31 @@ class Person
         return numeroEdad;
     }
 
-    printAll()
+    printAll(person)
     {
-        return ("Nombre: " + this.nombre + " -" + " Apellido: " + this.apellido1 + " -" + 
-                    " altura: " + this.altura + " -" + " peso: " + this.peso + " -" +
-                    " Año de nacimiento: " + this.yearOfBirth)
+        for(const atributo in person){
+            console.log("El atributo: " + atributo + ", su valor es : " + person[atributo])
+            
+        }
+       
+        
     }
 
     printHobbies()
     {
-         return ("Hobbies: " + this.hobbies)
+        for(let i = 0; i<this.hobbies.length;i++){
+            console.log(this.hobbies[i]);
+        }
     }
 
 
 }
 
 // Bloque Main
-// let hobbies = ["comer", "jugar"];
-// let persona1 = new Person("Juan","Garrido",180,90,1982,);
+let hobbies = ["comer", "jugar"];
+let persona1 = new Person("Juan","Garrido",180,90,1982,hobbies);
 // console.log(persona1.calcularIMC());
-// console.log(persona1.printAll());
+persona1.printAll(persona1);
 // console.log(persona1.printHobbies());
 
 module.exports = Person;

@@ -1,16 +1,30 @@
+
+const Person = require("./person.js");
 const LibPerson = require("./person.js");
 
 class Contacts
 {
-    constructor()
+
+    constructor(año)
     {
         this.personas = [];
+        this.edad=
 
     }
 
     printPersons()
     {
-        return this.personas;
+
+        for(let i =0; i < this.personas.length; i++){
+            this.personas[i].printAll();
+        }
+        // for(let i = 0; i<this.personas.length; i++){
+        //     for(const atributo in this.personas[i]){
+        //         console.log(this.personas[i][atributo]);
+
+        //     }
+        // }
+        // console.log()
 
     }
 
@@ -18,13 +32,15 @@ class Contacts
 let persona1 = new LibPerson("Antonio", "Saez", 160,60,1990, ["jugar", "correr"]);
 let persona2 = new LibPerson("Antonio", "Saez", 160,60,1990, ["jugar", "correr"]);
 let persona3 = new LibPerson("Antonio", "Saez", 160,60,1990, ["jugar", "correr"]);
+let contacts = new Contacts();
+
 // console.log(persona1)
-// personas.push(persona1);
-// this.personas.push(persona2);
-// this.personas.push(persona3);
+contacts.personas.push(persona1);
+contacts.personas.push(persona2);
+contacts.personas.push(persona3);
 
-
-// console.log(printPersons(contactos));
+contacts.printPersons();
+// console.log(contacts.printPersons());
 
 module.exports ={ Contacts };
 
