@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var vector_1 = require("./vector");
+var array1 = new vector_1.Vector(5, 5);
+var arrayTotal = new vector_1.Vector(5, 5);
+console.log(array1);
+console.log(arrayTotal);
+array1.print();
+console.log(arrayTotal.add(array1));
+console.log(arrayTotal.subs(array1));
+console.log(arrayTotal.mult(array1));
+console.log(array1.multNumber(5));
